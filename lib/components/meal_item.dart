@@ -64,71 +64,71 @@ class _MealItemState extends State<MealItem> {
               SizedBox(
                 height: 16,
               ),
-              widget.isHome
-                  ? GestureDetector(
-                      onTap: widget.onTap,
-                      child: Container(
-                        margin: EdgeInsets.only(left: 12, right: 12),
-                        height: 32,
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "+ 20 000 монет",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                      ),
-                    )
-                  : Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              count++;
-                            });
-                          },
-                          child: Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.grey.withOpacity(0.5)),
-                            child: Icon(Icons.add),
-                          ),
-                        ),
-                        SizedBox(width: 20),
-                        Text(count.toString(),
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w600)),
-                        SizedBox(width: 20),
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              if (count != 0) {
-                                count--;
-                              }
-                            });
-                          },
-                          child: Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.grey.withOpacity(0.5)),
-                            child: Icon(Icons.remove),
-                          ),
-                        ),
-                      ],
+              if (widget.isHome)
+                GestureDetector(
+                  onTap: widget.onTap,
+                  child: Container(
+                    margin: EdgeInsets.only(left: 12, right: 12),
+                    height: 32,
+                    decoration: BoxDecoration(
+                      color: Colors.black.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(10),
                     ),
+                    child: Center(
+                      child: Text(
+                        "+ 20 000 монет",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                )
+              //  Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       GestureDetector(
+              //         onTap: () {
+              //           setState(() {
+              //             count++;
+              //           });
+              //         },
+              //         child: Container(
+              //           height: 40,
+              //           width: 40,
+              //           decoration: BoxDecoration(
+              //               borderRadius: BorderRadius.circular(8),
+              //               color: Colors.grey.withOpacity(0.5)),
+              //           child: Icon(Icons.add),
+              //         ),
+              //       ),
+              //       SizedBox(width: 20),
+              //       Text(count.toString(),
+              //           style: TextStyle(
+              //               fontSize: 20,
+              //               color: Colors.black,
+              //               fontWeight: FontWeight.w600)),
+              //       SizedBox(width: 20),
+              //       GestureDetector(
+              //         onTap: () {
+              //           setState(() {
+              //             if (count != 0) {
+              //               count--;
+              //             }
+              //           });
+              //         },
+              //         child: Container(
+              //           height: 40,
+              //           width: 40,
+              //           decoration: BoxDecoration(
+              //               borderRadius: BorderRadius.circular(8),
+              //               color: Colors.grey.withOpacity(0.5)),
+              //           child: Icon(Icons.remove),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
             ],
           )),
     );

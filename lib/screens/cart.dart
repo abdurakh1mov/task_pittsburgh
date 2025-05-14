@@ -20,12 +20,12 @@ class Cart extends StatelessWidget {
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
-                childAspectRatio: 1 / 1.35),
+                childAspectRatio: 1 / 1.2),
             itemCount: state.savedMeals?.length ?? 0,
             itemBuilder: (context, index) {
               var item = state.savedMeals?[index];
               return MealItem(
-                  rootTapped: (){},
+                  rootTapped: () {},
                   isHome: false,
                   onTap: () {},
                   strMeal: item?.strMeal,
